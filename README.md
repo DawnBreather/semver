@@ -12,13 +12,19 @@ This CLI tool provides an easy way to recursively increment the semantic version
 ## Installation
 Clone the repository and navigate to the project directory:
 ```shell
-git clone [repository-url]
-cd [repository-name]
+git clone git@github.com:DawnBreather/semver.git
+cd ./semver
 ```
+
+Run unit tests:
+```shell
+go test .
+```
+
 
 Build the application:
 ```shell
-go build -o semver
+go build -o semver ./main/main.go
 ```
 
 ## Usage
@@ -35,7 +41,7 @@ go build -o semver
 ## Examples
 To increment the patch version in all Chart.yaml files recursively:
 ```shell
-./semver --increase-version-by-step 0.0.1 --string-regexp-prefix "^version:" --filename-regexp-pattern "Chart.yaml" --recursive-filesystem-path ./
+./semver --increase-version-by-step 0.0.1 --string-regexp-prefix "version:" --filename-regexp-pattern "Chart.yaml" --recursive-filesystem-path ./
 ```
 
 ## Testing

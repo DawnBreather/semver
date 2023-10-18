@@ -62,7 +62,7 @@ func processPath(path string, filenamePattern, increaseBy, prefix string) error 
         log.Printf("Error writing to file { %s }: %v", path, err)
         return err
       }
-      log.Printf("Updated file: %s", path)
+      //log.Printf("Updated file: %s", path)
     } else {
       log.Printf("No changes for file: %s", path)
     }
