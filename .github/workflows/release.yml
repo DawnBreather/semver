@@ -20,7 +20,7 @@ jobs:
           go-version: 1.19.0
 
       - name: Build
-        run: go build -o semver
+        run: go build ./main/main.go -o semver
 
       - name: Create Release
         id: create_release
