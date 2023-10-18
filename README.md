@@ -29,14 +29,14 @@ go build -o semver ./main/main.go
 
 ## Usage
 ```shell
-./semver --increase-version-by-step [INCREMENT] --string-regexp-prefix [PREFIX] --filename-regexp-pattern [PATTERN] --recursive-filesystem-path [PATH]
+./semver --increase-semver-by-step [INCREMENT] --semver-prefix-string-regexp [PREFIX] --filename-pattern-regexp [PATTERN] --filesystem-recursive-path [PATH]
 ```
 
 ## Parameters:
-* `--increase-version-by-step`: Define how much the version should be incremented. Example: "0.0.1", "1.0.0", "0.1.0"
-* `--string-regexp-prefix`: Regex prefix to match the version string in the file. Example: "^version:"
-* `--filename-regexp-pattern`: Regex pattern to match filenames. Example: "Chart.yaml"
-* `--recursive-filesystem-path`: The filesystem path to start the search. Defaults to "./"
+* `--increase-semver-by-step`: Define how much the version should be incremented. Example: "0.0.1" (increases patch version by 1), "1.0.1" (increases major and patch versions by 1), "0.0.4" (increases patch version by 4)
+* `--semver-prefix-string-regexp`: Regex prefix to match the version string in the file. Example: "^version:"
+* `--filename-pattern-regexp`: Regex pattern to match filenames. Example: "Chart.yaml"
+* `--filesystem-recursive-path`: The filesystem path to start the search. Defaults to "./"
 
 ## Examples
 To increment the patch version in all Chart.yaml files recursively:

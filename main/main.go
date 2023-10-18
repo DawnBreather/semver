@@ -11,10 +11,10 @@ import (
 
 func main() {
   var increaseBy, prefix, filenamePattern, fsPath string
-  flag.StringVar(&increaseBy, "increase-version-by-step", "", "Version to increase by")
-  flag.StringVar(&prefix, "string-regexp-prefix", "", "Regexp prefix for version string")
-  flag.StringVar(&filenamePattern, "filename-regexp-pattern", "", "Filename regexp pattern")
-  flag.StringVar(&fsPath, "recursive-filesystem-path", "./", "Filesystem path to start the search")
+  flag.StringVar(&increaseBy, "increase-semver-by-step", "", "Version to increase by")
+  flag.StringVar(&prefix, "semver-prefix-string-regexp", "", "Regexp prefix for version string")
+  flag.StringVar(&filenamePattern, "filename-pattern-regexp", "", "Filename regexp pattern")
+  flag.StringVar(&fsPath, "filesystem-recursive-path", "./", "Filesystem path to start the search")
   flag.Parse()
 
   log.Printf("")
